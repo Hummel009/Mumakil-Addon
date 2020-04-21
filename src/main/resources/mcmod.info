@@ -1,0 +1,16 @@
+[
+{
+	"modid" : "mumakil",
+	"name" : "Mumakil Submod",
+	"version" : "Version 1.0",
+	"credits" : "Hummel009",
+	"authorList": ["Hummel009"],
+	"description": "Adds mumakil to the LOTR Mod!",
+	"logoFile" : "assets/lotr/logo.png",
+	"url" : "",
+	"updateUrl" : "",
+	"parent" : "",
+	"dependencies": [],
+	"screenshots": []
+}
+]
