@@ -18,27 +18,7 @@ extends LOTREntityWarg {
         this.setSize(3.3f, 9f);
     	this.spawnsInDarkness = false;
     }
-    
-    @Override
-    protected void entityInit()
-    {
-        super.entityInit();
-        dataWatcher.addObject(22, Byte.valueOf((byte) 0));
-        dataWatcher.addObject(23, Byte.valueOf((byte) 0));
-        dataWatcher.addObject(24, Byte.valueOf((byte) 0)); 
-
-    }
-
-    public byte getTusks()
-    {
-        return (dataWatcher.getWatchableObjectByte(23));
-    }
-
-    public void setTusks(byte b)
-    {
-        dataWatcher.updateObject(23, Byte.valueOf(b));
-    }
-
+	
     @Override
     public LOTREntityNPC createWargRider() {
 		return null;
