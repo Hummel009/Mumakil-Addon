@@ -740,9 +740,8 @@ public class MAModelMumakil extends ModelBase {
 			f10 = 8.0f;
 		}
 		AdjustY(f10);
-		float TrunkXRot = f1 * 5.0f;
+		float TrunkXRot = 0.0f;
 		HeadXRot = 0.0f;
-		TrunkXRot = 0.0f;
 		if (sitting) {
 			HeadXRot = 0.0f;
 			TrunkXRot = 0.0f;

@@ -1,16 +1,18 @@
 [
-{
-	"modid" : "ma",
-	"name" : "Mumakil Addon",
-	"version" : "1.0",
-	"credits" : "Hummel009",
-	"authorList": ["Hummel009"],
-	"description": "This mod adds mumakil to the Lord of the Rings Mod",
-	"logoFile" : "assets/lotr/logo.png",
-	"url" : "",
-	"updateUrl" : "",
-	"parent" : "",
-	"dependencies": [],
-	"screenshots": []
-}
+  {
+    "modid": "ma",
+    "name": "Mumakil Addon",
+    "version": "1.0",
+    "credits": "Hummel009",
+    "authorList": [
+      "Hummel009"
+    ],
+    "description": "This mod adds mumakil to the Lord of the Rings Mod",
+    "logoFile": "assets/lotr/logo.png",
+    "url": "",
+    "updateUrl": "",
+    "parent": "",
+    "dependencies": [],
+    "screenshots": []
+  }
 ]
