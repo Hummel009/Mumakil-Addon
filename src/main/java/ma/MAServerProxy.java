@@ -1,9 +1,8 @@
-package mumakil;
+package ma;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-public class ServerProxy{
+public class MAServerProxy {
 	public void onInit(FMLInitializationEvent event) {
 	}
 }
