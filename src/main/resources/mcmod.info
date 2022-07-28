@@ -1,12 +1,10 @@
-[
-	{
-		"authorList": "Hummel009",
-		"credits": "Hummel009",
-		"description": "This mod adds mumakil to the Lord of the Rings Mod",
-		"mcversion": "1.7.10",
-		"modid": "ma",
-		"name": "Mumakil Addon",
-		"url": "https://github.com/Hummel009",
-		"version": "1.0"
-	}
-]
+[{
+  "modid": "ma",
+  "name": "Mumakil Addon",
+  "description": "This mod adds mumakil from the Lord of the Rings to Minecraft",
+  "version": "1.0",
+  "mcversion": "1.7.10",
+  "url": "https://github.com/Hummel009",
+  "authorList": ["Hummel009"],
+  "credits": "Hummel009"
+}]
