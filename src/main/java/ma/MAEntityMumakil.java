@@ -1,9 +1,11 @@
 package ma;
 
-import lotr.common.entity.npc.*;
+import lotr.common.entity.npc.LOTREntityNPC;
+import lotr.common.entity.npc.LOTREntityWarg;
 import lotr.common.fac.LOTRFaction;
 import net.minecraft.block.Block;
-import net.minecraft.entity.*;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
@@ -12,12 +14,12 @@ public class MAEntityMumakil extends LOTREntityWarg {
 
 	public MAEntityMumakil(World world) {
 		super(world);
-		setSize(3.3f, 9f);
+		setSize(3.3f, 9.0f);
 		spawnsInDarkness = false;
 	}
 
 	@Override
-	protected void applyEntityAttributes() {
+	public void applyEntityAttributes() {
 		super.applyEntityAttributes();
 		getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(200.0);
 		getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.25);
@@ -46,7 +48,7 @@ public class MAEntityMumakil extends LOTREntityWarg {
 	}
 
 	@Override
-	protected void func_145780_a(int i, int j, int k, Block block) {
+	public void func_145780_a(int i, int j, int k, Block block) {
 		playSound("lotr:troll.step", 0.75f, getSoundPitch());
 	}
 
@@ -76,7 +78,7 @@ public class MAEntityMumakil extends LOTREntityWarg {
 	}
 
 	@Override
-	protected float getSoundVolume() {
+	public float getSoundVolume() {
 		return 1.5f;
 	}
 
