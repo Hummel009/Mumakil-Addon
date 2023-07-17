@@ -4,4 +4,4 @@
 
 https://lotrminecraftmod.fandom.com/ru/wiki/Mumakil_Addon - статья, в которой подробно описан мод.
 
-Если скачать репозиторий и положить его по пути D:/Eclipse/Minecraft/Mumakil Addon, то, по идее, его потом можно спокойно импортировать в Eclipse или открыть через IntelliJ IDEA. Подразумевается, что на компьютере как минимум 1 раз выполнялась команда "gradlew setupDecompWorkspace eclipse".
+Если скачать репозиторий и положить его по пути D:/Eclipse/Minecraft/Mumakil-Addon, то, по идее, его потом можно спокойно импортировать в Eclipse или открыть через IntelliJ IDEA. Подразумевается, что на компьютере как минимум 1 раз выполнялась команда "gradlew setupDecompWorkspace eclipse".
