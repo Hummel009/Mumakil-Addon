@@ -10,23 +10,24 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 public class MAEntityMumakil extends LOTREntityWarg {
-	public static float HEIGHT = 3.0f;
+	private static final String TROLL_SAY = "lotr:troll.say";
 
 	public MAEntityMumakil(World world) {
 		super(world);
-		setSize(3.3f, 9.0f);
+		setSize(2.0f, 5.0f);
 		spawnsInDarkness = false;
 	}
 
 	@Override
 	public void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(200.0);
+		getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100.0);
 		getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.25);
-		getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(50.0);
+		getEntityAttribute(LOTREntityNPC.npcAttackDamage).setBaseValue(7.0);
 	}
 
 	@Override
+	@SuppressWarnings("NumericCastThatLosesPrecision")
 	public boolean attackEntityAsMob(Entity entity) {
 		if (super.attackEntityAsMob(entity)) {
 			float attackDamage = (float) getEntityAttribute(LOTREntityNPC.npcAttackDamage).getAttributeValue();
@@ -59,7 +60,7 @@ public class MAEntityMumakil extends LOTREntityWarg {
 
 	@Override
 	public String getDeathSound() {
-		return "lotr:troll.say";
+		return TROLL_SAY;
 	}
 
 	@Override
@@ -69,17 +70,17 @@ public class MAEntityMumakil extends LOTREntityWarg {
 
 	@Override
 	public String getHurtSound() {
-		return "lotr:troll.say";
+		return TROLL_SAY;
 	}
 
 	@Override
 	public String getLivingSound() {
-		return "lotr:troll.say";
+		return TROLL_SAY;
 	}
 
 	@Override
 	public float getSoundVolume() {
-		return 1.5f;
+		return 2.0f;
 	}
 
 	@Override

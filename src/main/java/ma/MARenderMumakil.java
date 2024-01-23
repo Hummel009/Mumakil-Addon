@@ -12,7 +12,6 @@ import org.lwjgl.opengl.GL11;
 public class MARenderMumakil extends RenderLiving {
 	public MARenderMumakil() {
 		super(new MAModelMumakil(), 0.5f);
-		setRenderPassModel(new MAModelMumakil());
 	}
 
 	@Override
@@ -23,7 +22,6 @@ public class MARenderMumakil extends RenderLiving {
 	@Override
 	public void preRenderCallback(EntityLivingBase entity, float f) {
 		super.preRenderCallback(entity, f);
-		float height = MAEntityMumakil.HEIGHT;
-		GL11.glScalef(height, height, height);
+		GL11.glScalef(2.0f, 2.0f, 2.0f);
 	}
 }
