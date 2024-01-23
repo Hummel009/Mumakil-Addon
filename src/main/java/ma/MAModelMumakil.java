@@ -576,10 +576,7 @@ public class MAModelMumakil extends ModelBase {
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		int type = 3;
-		byte harness = 0;
-		byte storage = 0;
-		setRotationAngles(f, f1, f2, f3, f4, f5);
+		setRotationAngles(f, f1, f2, f3);
 		leftTuskB.render(f5);
 		rightTuskB.render(f5);
 		leftTuskC.render(f5);
@@ -623,110 +620,110 @@ public class MAModelMumakil extends ModelBase {
 		model.rotateAngleZ = z;
 	}
 
-	private void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5) {
+	private void setRotationAngles(float f, float f1, float f2, float f3) {
 		float f31 = f3;
-		float RLegXRot = MathHelper.cos(f * 0.6662f + 3.141593f) * 0.8f * f1;
-		float LLegXRot = MathHelper.cos(f * 0.6662f) * 0.8f * f1;
+		float rLegXRot = MathHelper.cos(f * 0.6662f + 3.141593f) * 0.8f * f1;
+		float lLegXRot = MathHelper.cos(f * 0.6662f) * 0.8f * f1;
 		if (f31 > 20.0f) {
 			f31 = 20.0f;
 		}
 		if (f31 < -20.0f) {
 			f31 = -20.0f;
 		}
-		float HeadYRot = f31 / 57.29578f;
+		float headYRot = f31 / 57.29578f;
 		float f10 = 0.0f;
 		adjustY(f10);
 		float trunkXRot = 0.0f;
-		float HeadXRot = 0.0f;
+		float headXRot = 0.0f;
 		float radianF = 57.29578f;
-		head.rotateAngleX = -10.0f / radianF + HeadXRot;
-		headBump.rotateAngleY = head.rotateAngleY = HeadYRot;
+		head.rotateAngleX = -10.0f / radianF + headXRot;
+		headBump.rotateAngleY = head.rotateAngleY = headYRot;
 		headBump.rotateAngleX = head.rotateAngleX;
-		rightTuskA.rotateAngleY = HeadYRot;
-		leftTuskA.rotateAngleY = HeadYRot;
-		rightTuskA.rotateAngleX = 70.0f / radianF + HeadXRot;
-		leftTuskA.rotateAngleX = 70.0f / radianF + HeadXRot;
-		chin.rotateAngleY = HeadYRot;
-		chin.rotateAngleX = 113.0f / radianF + HeadXRot;
-		lowerLip.rotateAngleY = HeadYRot;
-		lowerLip.rotateAngleX = 85.0f / radianF + HeadXRot;
-		float EarF = 0.0f;
+		rightTuskA.rotateAngleY = headYRot;
+		leftTuskA.rotateAngleY = headYRot;
+		rightTuskA.rotateAngleX = 70.0f / radianF + headXRot;
+		leftTuskA.rotateAngleX = 70.0f / radianF + headXRot;
+		chin.rotateAngleY = headYRot;
+		chin.rotateAngleX = 113.0f / radianF + headXRot;
+		lowerLip.rotateAngleY = headYRot;
+		lowerLip.rotateAngleX = 85.0f / radianF + headXRot;
+		float earF = 0.0f;
 		float f2a = f2 % 100.0f;
 		if (f2a > 60.0f && f2a < 90.0f) {
-			EarF = MathHelper.cos(f2 * 0.5f) * 0.35f;
+			earF = MathHelper.cos(f2 * 0.5f) * 0.35f;
 		}
-		rightBigEar.rotateAngleY = 30.0f / radianF + HeadYRot + EarF;
-		rightSmallEar.rotateAngleY = 30.0f / radianF + HeadYRot + EarF;
-		leftBigEar.rotateAngleY = -30.0f / radianF + HeadYRot - EarF;
-		leftSmallEar.rotateAngleY = -30.0f / radianF + HeadYRot - EarF;
-		rightBigEar.rotateAngleX = -10.0f / radianF + HeadXRot;
-		rightSmallEar.rotateAngleX = -10.0f / radianF + HeadXRot;
-		leftBigEar.rotateAngleX = -10.0f / radianF + HeadXRot;
-		leftSmallEar.rotateAngleX = -10.0f / radianF + HeadXRot;
+		rightBigEar.rotateAngleY = 30.0f / radianF + headYRot + earF;
+		rightSmallEar.rotateAngleY = 30.0f / radianF + headYRot + earF;
+		leftBigEar.rotateAngleY = -30.0f / radianF + headYRot - earF;
+		leftSmallEar.rotateAngleY = -30.0f / radianF + headYRot - earF;
+		rightBigEar.rotateAngleX = -10.0f / radianF + headXRot;
+		rightSmallEar.rotateAngleX = -10.0f / radianF + headXRot;
+		leftBigEar.rotateAngleX = -10.0f / radianF + headXRot;
+		leftSmallEar.rotateAngleX = -10.0f / radianF + headXRot;
 		trunkA.rotationPointZ = -22.5f;
 		adjustAllRotationPoints(trunkA, head);
-		trunkA.rotateAngleY = HeadYRot;
+		trunkA.rotateAngleY = headYRot;
 		float trunkARotX = 90.0f - trunkXRot;
-		trunkA.rotateAngleX = trunkARotX / radianF + HeadXRot;
+		trunkA.rotateAngleX = trunkARotX / radianF + headXRot;
 		trunkB.rotationPointZ = -22.5f;
 		adjustAllRotationPoints(trunkB, trunkA);
-		trunkB.rotateAngleY = HeadYRot;
-		trunkB.rotateAngleX = (95.0f - trunkXRot * 1.5f) / radianF + HeadXRot;
+		trunkB.rotateAngleY = headYRot;
+		trunkB.rotateAngleX = (95.0f - trunkXRot * 1.5f) / radianF + headXRot;
 		trunkC.rotationPointZ = -22.5f;
 		adjustAllRotationPoints(trunkC, trunkB);
-		trunkC.rotateAngleY = HeadYRot;
-		trunkC.rotateAngleX = (110.0f - trunkXRot * 3.0f) / radianF + HeadXRot;
+		trunkC.rotateAngleY = headYRot;
+		trunkC.rotateAngleX = (110.0f - trunkXRot * 3.0f) / radianF + headXRot;
 		trunkD.rotationPointZ = -21.5f;
 		adjustAllRotationPoints(trunkD, trunkC);
-		trunkD.rotateAngleY = HeadYRot;
-		trunkD.rotateAngleX = (127.0f - trunkXRot * 4.5f) / radianF + HeadXRot;
+		trunkD.rotateAngleY = headYRot;
+		trunkD.rotateAngleX = (127.0f - trunkXRot * 4.5f) / radianF + headXRot;
 		trunkE.rotationPointZ = -19.0f;
 		adjustAllRotationPoints(trunkE, trunkD);
-		trunkE.rotateAngleY = HeadYRot;
-		trunkE.rotateAngleX = (145.0f - trunkXRot * 6.0f) / radianF + HeadXRot;
-		frontRightUpperLeg.rotateAngleX = RLegXRot;
-		frontLeftUpperLeg.rotateAngleX = LLegXRot;
-		backLeftUpperLeg.rotateAngleX = RLegXRot;
-		backRightUpperLeg.rotateAngleX = LLegXRot;
+		trunkE.rotateAngleY = headYRot;
+		trunkE.rotateAngleX = (145.0f - trunkXRot * 6.0f) / radianF + headXRot;
+		frontRightUpperLeg.rotateAngleX = rLegXRot;
+		frontLeftUpperLeg.rotateAngleX = lLegXRot;
+		backLeftUpperLeg.rotateAngleX = rLegXRot;
+		backRightUpperLeg.rotateAngleX = lLegXRot;
 		adjustXRotationPoints(frontRightLowerLeg, frontRightUpperLeg);
 		adjustXRotationPoints(backRightLowerLeg, backRightUpperLeg);
 		adjustXRotationPoints(frontLeftLowerLeg, frontLeftUpperLeg);
 		adjustXRotationPoints(backLeftLowerLeg, backLeftUpperLeg);
-		float LLegXRotD = LLegXRot * 57.29578f;
-		float RLegXRotD = RLegXRot * 57.29578f;
-		if (LLegXRotD > 0.0f) {
-			LLegXRotD *= 2.0f;
+		float lLegXRotD = lLegXRot * 57.29578f;
+		float rLegXRotD = rLegXRot * 57.29578f;
+		if (lLegXRotD > 0.0f) {
+			lLegXRotD *= 2.0f;
 		}
-		if (RLegXRotD > 0.0f) {
-			RLegXRotD *= 2.0f;
+		if (rLegXRotD > 0.0f) {
+			rLegXRotD *= 2.0f;
 		}
-		frontLeftLowerLeg.rotateAngleX = LLegXRotD / radianF;
-		frontRightLowerLeg.rotateAngleX = RLegXRotD / radianF;
-		backLeftLowerLeg.rotateAngleX = RLegXRotD / radianF;
-		backRightLowerLeg.rotateAngleX = LLegXRotD / radianF;
-		leftTuskB.rotateAngleY = HeadYRot;
-		leftTuskC.rotateAngleY = HeadYRot;
-		leftTuskD.rotateAngleY = HeadYRot;
-		rightTuskB.rotateAngleY = HeadYRot;
-		rightTuskC.rotateAngleY = HeadYRot;
-		rightTuskD.rotateAngleY = HeadYRot;
-		leftTuskB.rotateAngleX = 40.0f / radianF + HeadXRot;
-		leftTuskC.rotateAngleX = 10.0f / radianF + HeadXRot;
-		leftTuskD.rotateAngleX = -20.0f / radianF + HeadXRot;
-		rightTuskB.rotateAngleX = 40.0f / radianF + HeadXRot;
-		rightTuskC.rotateAngleX = 10.0f / radianF + HeadXRot;
-		rightTuskD.rotateAngleX = -20.0f / radianF + HeadXRot;
-		storageLeftBedroll.rotateAngleX = LLegXRot / 10.0f;
-		storageFrontLeftChest.rotateAngleX = LLegXRot / 5.0f;
-		storageBackLeftChest.rotateAngleX = LLegXRot / 5.0f;
-		storageRightBedroll.rotateAngleX = RLegXRot / 10.0f;
-		storageFrontRightChest.rotateAngleX = RLegXRot / 5.0f;
-		storageBackRightChest.rotateAngleX = RLegXRot / 5.0f;
-		fortNeckBeam.rotateAngleZ = LLegXRot / 50.0f;
-		fortBackBeam.rotateAngleZ = LLegXRot / 50.0f;
-		fortBackRightWall.rotateAngleZ = LLegXRot / 50.0f;
-		fortBackLeftWall.rotateAngleZ = LLegXRot / 50.0f;
-		fortBackWall.rotateAngleX = 0.0f - LLegXRot / 50.0f;
+		frontLeftLowerLeg.rotateAngleX = lLegXRotD / radianF;
+		frontRightLowerLeg.rotateAngleX = rLegXRotD / radianF;
+		backLeftLowerLeg.rotateAngleX = rLegXRotD / radianF;
+		backRightLowerLeg.rotateAngleX = lLegXRotD / radianF;
+		leftTuskB.rotateAngleY = headYRot;
+		leftTuskC.rotateAngleY = headYRot;
+		leftTuskD.rotateAngleY = headYRot;
+		rightTuskB.rotateAngleY = headYRot;
+		rightTuskC.rotateAngleY = headYRot;
+		rightTuskD.rotateAngleY = headYRot;
+		leftTuskB.rotateAngleX = 40.0f / radianF + headXRot;
+		leftTuskC.rotateAngleX = 10.0f / radianF + headXRot;
+		leftTuskD.rotateAngleX = -20.0f / radianF + headXRot;
+		rightTuskB.rotateAngleX = 40.0f / radianF + headXRot;
+		rightTuskC.rotateAngleX = 10.0f / radianF + headXRot;
+		rightTuskD.rotateAngleX = -20.0f / radianF + headXRot;
+		storageLeftBedroll.rotateAngleX = lLegXRot / 10.0f;
+		storageFrontLeftChest.rotateAngleX = lLegXRot / 5.0f;
+		storageBackLeftChest.rotateAngleX = lLegXRot / 5.0f;
+		storageRightBedroll.rotateAngleX = rLegXRot / 10.0f;
+		storageFrontRightChest.rotateAngleX = rLegXRot / 5.0f;
+		storageBackRightChest.rotateAngleX = rLegXRot / 5.0f;
+		fortNeckBeam.rotateAngleZ = lLegXRot / 50.0f;
+		fortBackBeam.rotateAngleZ = lLegXRot / 50.0f;
+		fortBackRightWall.rotateAngleZ = lLegXRot / 50.0f;
+		fortBackLeftWall.rotateAngleZ = lLegXRot / 50.0f;
+		fortBackWall.rotateAngleX = 0.0f - lLegXRot / 50.0f;
 		float tailMov = f1 * 0.9f;
 		if (tailMov < 0.0f) {
 			tailMov = 0.0f;
