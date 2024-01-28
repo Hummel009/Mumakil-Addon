@@ -5,7 +5,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import lotr.common.entity.LOTREntities;
 
-@Mod(modid = "ma", dependencies = "required-after:lotr")
+@Mod(modid = "ma", dependencies = "required-after:lotr", useMetadata = true)
 public class MA {
 	@SidedProxy(serverSide = "ma.MAServerProxy", clientSide = "ma.MAClientProxy")
 	private static MAServerProxy proxy;
