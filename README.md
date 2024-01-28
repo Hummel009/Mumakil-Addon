@@ -13,9 +13,8 @@
 [![Technical Debt][technical_debt_badge]][technical_debt_link]
 [![Lines of Code][lines_of_code_badge]][lines_of_code_link]
 
-Mumakil Addon - аддон к моду "Властелин колец" для Minecraft. Добавляет в игру моба - мумака, гигантского слона Харада.
-
-https://lotrminecraftmod.fandom.com/ru/wiki/Mumakil_Addon - статья, в которой подробно описан мод.
+Mumakil Addon - аддон к моду "Властелин колец" для Minecraft. Добавляет в игру моба - мумака, гигантского слона Харада. 
+Он принадлежит к фракции Харада и атакует враждебных солдат.
 
 <!----------------------------------------------------------------------------->
 
