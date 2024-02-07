@@ -1,14 +1,11 @@
-package com.github.hummel.mumakil.content;
+package com.github.hummel.mumakil.model;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
 
-@SideOnly(Side.CLIENT)
-public class MumakilModel extends ModelBase {
+public class ModelMumakil extends ModelBase {
 	private final ModelRenderer head;
 	private final ModelRenderer neck;
 	private final ModelRenderer headBump;
@@ -104,7 +101,7 @@ public class MumakilModel extends ModelBase {
 	private final ModelRenderer storageUpLeft;
 	private final ModelRenderer storageUpRight;
 
-	public MumakilModel() {
+	public ModelMumakil() {
 		textureWidth = 128;
 		textureHeight = 256;
 		head = new ModelRenderer(this, 60, 0);

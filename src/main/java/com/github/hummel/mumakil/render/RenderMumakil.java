@@ -1,17 +1,15 @@
-package com.github.hummel.mumakil.content;
+package com.github.hummel.mumakil.render;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import com.github.hummel.mumakil.model.ModelMumakil;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
-@SideOnly(Side.CLIENT)
-public class MumakilRender extends RenderLiving {
-	public MumakilRender() {
-		super(new MumakilModel(), 0.5f);
+public class RenderMumakil extends RenderLiving {
+	public RenderMumakil() {
+		super(new ModelMumakil(), 0.5f);
 	}
 
 	@Override
