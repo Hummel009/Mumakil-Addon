@@ -1,4 +1,4 @@
-package ma;
+package com.github.hummel.mumakil.content;
 
 import lotr.common.entity.npc.LOTREntityNPC;
 import lotr.common.entity.npc.LOTREntityWarg;
@@ -9,10 +9,10 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class MAEntityMumakil extends LOTREntityWarg {
+public class MumakilEntity extends LOTREntityWarg {
 	private static final String TROLL_SAY = "lotr:troll.say";
 
-	public MAEntityMumakil(World world) {
+	public MumakilEntity(World world) {
 		super(world);
 		setSize(2.0f, 5.0f);
 		spawnsInDarkness = false;

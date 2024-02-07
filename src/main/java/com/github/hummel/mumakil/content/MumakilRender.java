@@ -1,4 +1,4 @@
-package ma;
+package com.github.hummel.mumakil.content;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -9,9 +9,9 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 @SideOnly(Side.CLIENT)
-public class MARenderMumakil extends RenderLiving {
-	public MARenderMumakil() {
-		super(new MAModelMumakil(), 0.5f);
+public class MumakilRender extends RenderLiving {
+	public MumakilRender() {
+		super(new MumakilModel(), 0.5f);
 	}
 
 	@Override

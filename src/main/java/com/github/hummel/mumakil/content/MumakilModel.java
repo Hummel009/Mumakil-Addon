@@ -1,4 +1,4 @@
-package ma;
+package com.github.hummel.mumakil.content;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -8,7 +8,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
 
 @SideOnly(Side.CLIENT)
-public class MAModelMumakil extends ModelBase {
+public class MumakilModel extends ModelBase {
 	private final ModelRenderer head;
 	private final ModelRenderer neck;
 	private final ModelRenderer headBump;
@@ -104,7 +104,7 @@ public class MAModelMumakil extends ModelBase {
 	private final ModelRenderer storageUpLeft;
 	private final ModelRenderer storageUpRight;
 
-	public MAModelMumakil() {
+	public MumakilModel() {
 		textureWidth = 128;
 		textureHeight = 256;
 		head = new ModelRenderer(this, 60, 0);
