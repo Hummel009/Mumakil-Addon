@@ -15,6 +15,7 @@ public class Main {
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		LOTREntities.registerCreature(EntityMumakil.class, "Mumakil", 1004, 16376764, 11772801);
-		proxy.preInit(event);
+
+		proxy.preInit();
 	}
 }
