@@ -1,5 +1,6 @@
 package com.github.hummel.mumakil.entity;
 
+import lotr.common.LOTRAchievement;
 import lotr.common.entity.npc.LOTREntityNPC;
 import lotr.common.entity.npc.LOTREntityWarg;
 import lotr.common.fac.LOTRFaction;
@@ -56,6 +57,11 @@ public class EntityMumakil extends LOTREntityWarg {
 	@Override
 	public float getAlignmentBonus() {
 		return 10.0f;
+	}
+
+	@Override
+	public LOTRAchievement getKillAchievement() {
+		return null;
 	}
 
 	@Override
