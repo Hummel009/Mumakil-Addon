@@ -6,10 +6,11 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
+@SuppressWarnings({"PublicField", "WeakerAccess"})
 @Mod(modid = "mumakil", dependencies = "required-after:lotr", useMetadata = true)
 public class Main {
 	@SidedProxy(serverSide = "com.github.hummel.mumakil.proxy.ServerProxy", clientSide = "com.github.hummel.mumakil.proxy.ClientProxy")
-	private static CommonProxy proxy;
+	public static CommonProxy proxy;
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
