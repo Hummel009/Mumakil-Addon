@@ -24,14 +24,14 @@ public class EntityMumakil extends LOTREntityWarg {
 		super.applyEntityAttributes();
 		getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100.0);
 		getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.25);
-		getEntityAttribute(LOTREntityNPC.npcAttackDamage).setBaseValue(7.0);
+		getEntityAttribute(npcAttackDamage).setBaseValue(7.0);
 	}
 
 	@Override
 	@SuppressWarnings("NumericCastThatLosesPrecision")
 	public boolean attackEntityAsMob(Entity entity) {
 		if (super.attackEntityAsMob(entity)) {
-			float attackDamage = (float) getEntityAttribute(LOTREntityNPC.npcAttackDamage).getAttributeValue();
+			float attackDamage = (float) getEntityAttribute(npcAttackDamage).getAttributeValue();
 			float knockbackModifier = 0.25f * attackDamage;
 			entity.addVelocity(-MathHelper.sin(rotationYaw * 3.1415927f / 180.0f) * knockbackModifier * 0.5f, knockbackModifier * 0.1, MathHelper.cos(rotationYaw * 3.1415927f / 180.0f) * knockbackModifier * 0.5f);
 			return true;

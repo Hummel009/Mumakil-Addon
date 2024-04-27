@@ -13,6 +13,7 @@ public class Main {
 	public static CommonProxy proxy;
 
 	@Mod.EventHandler
+	@SuppressWarnings("MethodMayBeStatic")
 	public void preInit(FMLPreInitializationEvent event) {
 		Entities.preInit();
 
